@@ -307,7 +307,7 @@ footer{background:var(--ink);color:rgba(253,251,248,0.4);padding:3rem 6vw;font-s
     </div>
     <h1 class="hero-title">Retreat<br><em>Sanctuary</em><br>Bali 2027</h1>
     <p class="hero-subtitle" data-t="hero_sub">Where Ancient Wisdom meets Neuroscience.<br>7 days of pre-verbal somatic therapy and returning to the primal state of being human.</p>
-    <a href="#invest" class="hero-cta" data-t="apply_cta">Apply for a Place</a>
+    <a href="javascript:void(0)" class="hero-cta" data-t="apply_cta" onclick="openModal()">Apply for a Place</a>
   </div>
 </section>
 
@@ -686,12 +686,12 @@ footer{background:var(--ink);color:rgba(253,251,248,0.4);padding:3rem 6vw;font-s
     </div>
   </div>
   <div class="final-cta-wrap reveal">
-    <a href="#" class="final-cta" data-t="final_cta">Apply for a Place in the Sanctuary</a>
+    <a href="javascript:void(0)" class="final-cta" data-t="final_cta" onclick="openModal()">Apply for a Place in the Sanctuary</a>
   </div>
 </section>
 
 <footer>
-  <span>&#169; 2026 Gaia Sanctuary &middot; Ana Gaia</span>
+  <span>&#169; 2027 Neo Healing &middot; Anastasiia Shadrina</span>
   <span style="color:var(--stone);font-size:0.75rem">Ubud, Bali &middot; Portugal &middot; Vienna</span>
 </footer>
 
@@ -908,10 +908,12 @@ function playVideo() {
 }
 
 var reveals = document.querySelectorAll('.reveal');
-var obs = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, {threshold: 0.05});
-reveals.forEach(function(r) { obs.observe(r); });
+if (reveals.length && window.IntersectionObserver) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, {threshold: 0.05});
+  reveals.forEach(function(r) { obs.observe(r); });
+}
 
 window.addEventListener('scroll', function() {
   document.getElementById('navbar').style.background =
@@ -928,20 +930,16 @@ function closeModal() {
   document.getElementById('apply-modal').classList.remove('open');
   document.body.style.overflow = '';
 }
-document.getElementById('apply-modal').addEventListener('click', function(e) {
-  if (e.target === this) closeModal();
-});
+if (document.getElementById('apply-modal')) {
+  document.getElementById('apply-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+}
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeModal();
 });
 
-// Wire all CTA buttons to open modal
-document.querySelectorAll('.hero-cta, .final-cta').forEach(function(btn) {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    openModal();
-  });
-});
+// CTA buttons use onclick="openModal()" directly
 
 // ── FORM SUBMIT via Formspree ──────────────────────────
 function submitForm() {
@@ -1020,16 +1018,18 @@ function submitForm() {
 // ── IN-PAGE NAV ACTIVE STATE ──────────────────────────
 var sections = document.querySelectorAll('section[id]');
 var navLinks = document.querySelectorAll('.page-nav-link');
-window.addEventListener('scroll', function() {
-  var scrollY = window.scrollY + window.innerHeight * 0.4;
-  var current = '';
-  sections.forEach(function(s) {
-    if (s.offsetTop <= scrollY) current = s.id;
-  });
-  navLinks.forEach(function(l) {
-    l.classList.toggle('active', l.getAttribute('href') === '#' + current);
-  });
-}, {passive: true});
+if (navLinks.length) {
+  window.addEventListener('scroll', function() {
+    var scrollY = window.scrollY + window.innerHeight * 0.4;
+    var current = '';
+    sections.forEach(function(s) {
+      if (s.offsetTop <= scrollY) current = s.id;
+    });
+    navLinks.forEach(function(l) {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+    });
+  }, {passive: true});
+}
 
 </script>
 
@@ -1113,12 +1113,12 @@ window.addEventListener('scroll', function() {
       </div>
 
       <button class="form-submit" id="form-submit-btn" onclick="submitForm()" data-t="f_submit">Send My Application</button>
-      <p class="form-note" data-t="f_note">This is not a booking — it is the beginning of a conversation. Ana personally reviews every application and responds within 48 hours.</p>
+      <p class="form-note" data-t="f_note">This is not a booking — it is the beginning of a conversation. Anastasiia personally reviews every application and responds within 48 hours.</p>
     </div>
     <div class="form-success" id="modal-success" style="display:none">
       <div class="form-success-icon">&#10003;</div>
       <div class="form-success-title" data-t="success_title">Your application has been received.</div>
-      <div class="form-success-body" data-t="success_body">Thank you for reaching out. Ana personally reads every application and will be in touch within 48 hours to discuss next steps.</div>
+      <div class="form-success-body" data-t="success_body">Thank you for reaching out. Anastasiia personally reads every application and will be in touch within 48 hours to discuss next steps.</div>
     </div>
   </div>
 </div>
