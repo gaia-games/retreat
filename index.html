@@ -55,7 +55,7 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);fon
 /* ── HERO HEADER: big photo LEFT, welcome RIGHT ── */
 #hero-header{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;padding-top:var(--top-bar-h);background:var(--ink);}
 .hh-photo-wrap{position:relative;overflow:hidden;}
-.hh-photo{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;opacity:0.88;}
+.hh-photo{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;opacity:0.88;}
 .hh-photo-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,rgba(26,24,20,0.5) 100%);}
 .hh-content{display:flex;flex-direction:column;justify-content:center;padding:6vw 5vw 6vw 5vw;}
 .hh-eyebrow{font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.75rem;}
@@ -131,7 +131,8 @@ footer{background:var(--ink);color:rgba(253,251,248,0.4);padding:3rem 6vw;font-s
 
 @media(max-width:1000px){
   #hero-header{grid-template-columns:1fr}
-  .hh-photo-wrap{height:55vw;min-height:260px}
+  .hh-photo-wrap{height:75vw;min-height:320px}
+  .hh-photo{object-position:center 20%}
   .hh-content{padding:8vw 6vw}
   #about-hero{grid-template-columns:1fr}
   .hero-right{height:60vw;min-height:320px}
