@@ -316,6 +316,8 @@ footer{background:var(--ink);color:rgba(253,251,248,0.4);padding:3rem 6vw;font-s
 
 
 
+
+@media(max-width:700px){.rq-grid{grid-template-columns:1fr !important;}}
 </style>
 </head>
 <body>
@@ -777,6 +779,36 @@ footer{background:var(--ink);color:rgba(253,251,248,0.4);padding:3rem 6vw;font-s
   </div>
 </section>
 
+<!-- ═══ RETREAT TESTIMONIAL QUOTES ═══ -->
+<section id="retreat-quotes" style="background:var(--cream-dark);padding:clamp(60px,8vw,100px) 6vw">
+  <div style="max-width:900px;margin:0 auto">
+    <div class="reveal" style="text-align:center;margin-bottom:3.5rem">
+      <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem" data-t="rq_label">What Women Say</span>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:500;color:var(--ink)" data-t="rq_h">After the Retreat</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem" class="reveal rq-grid">
+      <div style="background:var(--warm-white);padding:2rem 2rem 1.5rem;border-top:2px solid var(--gold-light)">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:1.25rem" data-t="rq1">"I came back so happy — I didn't expect such a powerful effect. Something truly opened in my soul, and energy appeared to fulfil my dreams."</p>
+        <span style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--stone)">Retreat participant</span>
+      </div>
+      <div style="background:var(--warm-white);padding:2rem 2rem 1.5rem;border-top:2px solid var(--gold-light)">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:1.25rem" data-t="rq2">"Your retreat was healing for me. Truly about returning to one's authentic self — not about 'flying away'. Thank you."</p>
+        <span style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--stone)">Retreat participant</span>
+      </div>
+      <div style="background:var(--warm-white);padding:2rem 2rem 1.5rem;border-top:2px solid var(--gold-light)">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:1.25rem" data-t="rq3">"This is what your retreats do to people — they become conscious, they hear their own desires, and they always choose themselves."</p>
+        <span style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--stone)">Retreat participant</span>
+      </div>
+      <div style="background:var(--warm-white);padding:2rem 2rem 1.5rem;border-top:2px solid var(--gold-light)">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:1.25rem" data-t="rq4">"It was incredibly deep, sensory, and so powerful. So much came out — the process is still continuing."</p>
+        <span style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--stone)">— Katharina, Winter Solstice Retreat</span>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem" class="reveal">
+      <a href="testimonials.html" style="font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px;text-decoration:none;transition:color 0.2s" data-t="rq_link">Read all testimonials →</a>
+    </div>
+  </div>
+</section>
 <!-- ═══ INVEST ═══ -->
 <section id="invest">
   <div class="reveal">
@@ -980,7 +1012,13 @@ const T = {
 
     nav_invite:"The Invitation", nav_method:"The Method", nav_pravilo:"Watsu & Yin",
     nav_sanctuary:"Sanctuary Field", nav_journey:"7 Days", nav_host:"Your Host",
-    nav_venue:"The Villa", nav_invest:"Apply",
+    nav_venue:"The Villa", rq_label:"What Women Say", rq_h:"After the Retreat",
+    rq1:"\"I came back so happy — I didn't expect such a powerful effect. Something truly opened in my soul, and energy appeared to fulfil my dreams.\"",
+    rq2:"\"Your retreat was healing for me. Truly about returning to one's authentic self — not about 'flying away'. Thank you.\"",
+    rq3:"\"This is what your retreats do to people — they become conscious, they hear their own desires, and they always choose themselves.\"",
+    rq4:"\"It was incredibly deep, sensory, and so powerful. So much came out — the process is still continuing.\"",
+    rq_link:"Read all testimonials →",
+    nav_invest:"Apply",
     modal_sub:"Retreat Sanctuary: Bali 2027 \u00b7 8 spots total",
     f_name_label:"Full Name", f_email_label:"Email Address", f_dates_label:"Preferred Dates",
     f_dates_opt0:"\u2014 Select dates \u2014",
@@ -1090,7 +1128,13 @@ const T = {
 
     nav_invite:"Запрошення", nav_method:"Метод", nav_pravilo:"Ватсу & Інь",
     nav_sanctuary:"Поле Санктуарію", nav_journey:"7 Днів", nav_host:"Ваш Фасилітатор",
-    nav_venue:"Вілла", nav_invest:"Заявка",
+    nav_venue:"Вілла", rq_label:"Що кажуть жінки", rq_h:"Після ретриту",
+    rq1:"\"Я повернулась такою щасливою — не очікувала настільки сильного ефекту. Щось дійсно розкрилось у душі і з'явився заряд виконувати мрії.\"",
+    rq2:"\"Твій ретрит був цілющий для мене. Дійсно про повернення до істинної себе, а не про відльот. Дякую.\"",
+    rq3:"\"Ось що твої ретрити роблять з людьми — вони стають свідомими, чують свої бажання і завжди обирають себе.\"",
+    rq4:"\"Це було неймовірно глибоко, чуттєво і так сильно. Так багато чого виходило — процес ще продовжується.\"",
+    rq_link:"Читати всі відгуки →",
+    nav_invest:"Заявка",
     inc_label:"Що входить", inc_h1:"Цей ретрит —", inc_h2:"повний досвід.",
     inc_included_title:"Входить", inc_not_title:"Не входить",
     inc_1:"Проживання на приватній еко-віллі (7 або 8 ночей)",
