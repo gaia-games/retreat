@@ -139,7 +139,14 @@ footer{background:var(--ink);color:rgba(253,251,248,0.4);padding:3rem 6vw;font-s
         <a href="#">Portugal</a>
       </div>
     </li>
-    <li class="top-nav-item"><a class="top-nav-link" href="education_mentorship.html">Education &amp; Mentorship</a></li>
+    <li class="top-nav-item">
+      <a class="top-nav-link" href="education_mentorship.html">Education &amp; Mentorship</a>
+      <div class="top-nav-dropdown">
+        <a href="education_mentorship.html#programmes">Path of the Creator</a>
+        <a href="education_mentorship.html#programmes">Neo Healing Practitioner</a>
+        <a href="education_mentorship.html#mentorship">Personal Mentorship</a>
+      </div>
+    </li>
     <li class="top-nav-item"><a class="top-nav-link" href="testimonials.html">Testimonials</a></li>
     <li class="top-nav-item"><a class="top-nav-link" href="#">Journal</a></li>
   </ul>
@@ -332,8 +339,9 @@ footer{background:var(--ink);color:rgba(253,251,248,0.4);padding:3rem 6vw;font-s
     <span class="section-label" data-t="mf_label">Apply</span>
     <h2 class="section-headline" data-t="mf_h">Ready to work<br><em>together?</em></h2>
     <p style="font-size:0.9rem;color:var(--stone);margin-bottom:2.5rem;line-height:1.7" data-t="mf_sub">Tell me about yourself and where you are right now. Ana personally reviews every application and responds within 48 hours.</p>
-    <form action="https://formspree.io/f/xlgklzky" method="POST" id="mentorship-application">
+    <form action="https://formspree.io/f/xojoqenl" method="POST" id="mentorship-application">
       <input type="hidden" name="form_type" value="Mentorship Application">
+      <input type="hidden" name="_subject" value="New Mentorship Application — Ana Gaia">
       <input class="form-input" type="text" name="name" placeholder="Your name" required>
       <input class="form-input" type="email" name="email" placeholder="Your email" required>
       <input class="form-input" type="text" name="role" placeholder="What do you do?">
@@ -349,8 +357,9 @@ footer{background:var(--ink);color:rgba(253,251,248,0.4);padding:3rem 6vw;font-s
     <button class="wl-close" onclick="closeWaitlist()">&times;</button>
     <h3 class="wl-title" data-t="wl_title">Join the Waitlist</h3>
     <p class="wl-sub" data-t="wl_sub">Neo Healing Practitioner opens in cohorts. Leave your email and you'll be the first to know when the next group begins.</p>
-    <form id="waitlist-form" action="https://formspree.io/f/xlgklzky" method="POST">
+    <form id="waitlist-form" action="https://formspree.io/f/mwvdklnw" method="POST">
       <input type="hidden" name="form_type" value="Neo Healing Practitioner Waitlist">
+      <input type="hidden" name="_subject" value="Neo Healing Practitioner Waitlist — Ana Gaia">
       <input class="form-input" type="text" name="name" placeholder="Your name" required>
       <input class="form-input" type="email" name="email" placeholder="Your email" required>
       <button type="submit" class="form-submit" data-t="wl_btn">Join the Waitlist</button>
