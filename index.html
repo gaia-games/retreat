@@ -252,7 +252,7 @@ footer{background:var(--ink);color:rgba(253,251,248,0.4);padding:3rem 6vw;font-s
         <a href="#about-hero" onclick="window.scrollTo(0,0)">About Me</a>
         <a href="testimonials.html">Testimonials</a>
         <a href="method.html">The Method</a>
-        <a href="#cta-section">Contact</a>
+        <a href="contact.html">Contact</a>
       </div>
     </li>
     <li class="top-nav-item">
@@ -289,20 +289,21 @@ footer{background:var(--ink);color:rgba(253,251,248,0.4);padding:3rem 6vw;font-s
 <div id="mobile-menu">
   <div class="mob-item">
     <button class="mob-link" onclick="toggleMobSub(this)">
-      <span data-t="mob_home">Home</span><span class="mob-arrow">&#9656;</span>
+      Home<span class="mob-arrow">&#9656;</span>
     </button>
     <div class="mob-sub">
-      <a href="#about-hero" data-t="mob_about">About Me</a>
+      <a href="index.html#about-hero" onclick="closeMobileMenu()" data-t="mob_about">About Me</a>
       <a href="testimonials.html" onclick="closeMobileMenu()" data-t="mob_test">Testimonials</a>
       <a href="method.html" onclick="closeMobileMenu()" data-t="mob_method">The Method</a>
-      <a href="#cta-section" data-t="mob_contact">Contact</a>
+      <a href="contact.html" onclick="closeMobileMenu()" data-t="mob_contact">Contact</a>
     </div>
   </div>
   <div class="mob-item">
     <button class="mob-link" onclick="toggleMobSub(this)">
-      <span data-t="mob_retreats">Retreat Sanctuaries</span><span class="mob-arrow">&#9656;</span>
+      Retreat Sanctuaries<span class="mob-arrow">&#9656;</span>
     </button>
     <div class="mob-sub">
+      <a href="retreats.html" onclick="closeMobileMenu()" data-t="mob_retreats">All Retreats</a>
       <a href="retreat_sanctuary_bali_2027.html" onclick="closeMobileMenu()" data-t="mob_bali">Bali 2027</a>
       <a href="#" data-t="mob_portugal">Portugal</a>
       <a href="#" data-t="mob_mexico">Mexico</a>
@@ -310,22 +311,29 @@ footer{background:var(--ink);color:rgba(253,251,248,0.4);padding:3rem 6vw;font-s
   </div>
   <div class="mob-item">
     <button class="mob-link" onclick="toggleMobSub(this)">
-      <span data-t="mob_edu">Education &amp; Mentorship</span><span class="mob-arrow">&#9656;</span>
+      Education &amp; Mentorship<span class="mob-arrow">&#9656;</span>
     </button>
     <div class="mob-sub">
       <a href="education_mentorship.html#programmes" onclick="closeMobileMenu()" data-t="mob_path">Path of the Creator</a>
-      <a href="education_mentorship.html#mentorship" onclick="closeMobileMenu()" data-t="mob_mentor">Mentorship</a>
+      <a href="education_mentorship.html#programmes" onclick="closeMobileMenu()">Neo Healing Practitioner</a>
+      <a href="education_mentorship.html#mentorship" onclick="closeMobileMenu()" data-t="mob_mentor">Personal Mentorship</a>
     </div>
   </div>
   <div class="mob-item">
-    <a class="mob-link" href="#" data-t="mob_journal">Journal</a>
+    <a class="mob-link" href="testimonials.html" onclick="closeMobileMenu()" data-t="mob_test">Testimonials</a>
+  </div>
+  <div class="mob-item">
+    <a class="mob-link" href="journal.html" onclick="closeMobileMenu()" data-t="mob_journal">Journal</a>
   </div>
   <div class="mob-item">
     <a class="mob-link" href="#" data-t="mob_library">Library</a>
   </div>
+  <div class="mob-item">
+    <a class="mob-link" href="contact.html" onclick="closeMobileMenu()" data-t="mob_contact">Contact</a>
+  </div>
   <div class="mob-lang">
-    <button class="mob-lang-btn active" id="mob-btn-en" onclick="setLang('en');closeMobileMenu()">EN</button>
-    <button class="mob-lang-btn" id="mob-btn-ua" onclick="setLang('ua');closeMobileMenu()">UA</button>
+    <button class="mob-lang-btn active" id="mob-btn-en" onclick="setLang('en')">EN</button>
+    <button class="mob-lang-btn" id="mob-btn-ua" onclick="setLang('ua')">UA</button>
   </div>
 </div>
 
@@ -349,7 +357,7 @@ footer{background:var(--ink);color:rgba(253,251,248,0.4);padding:3rem 6vw;font-s
       <a class="hh-nav-link" href="#about-hero" data-t="hh_about">About Me</a>
       <a class="hh-nav-link" href="#intellect" data-t="hh_method">The Method</a>
       <a class="hh-nav-link" href="testimonials.html" onclick="closeMobileMenu()" data-t="hh_test">Testimonials</a>
-      <a class="hh-nav-link" href="#cta-section" data-t="hh_contact">Contact</a>
+      <a class="hh-nav-link" href="contact.html" data-t="hh_contact">Contact</a>
     </nav>
   </div>
 </div>
